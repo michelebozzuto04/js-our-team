@@ -15,6 +15,13 @@ img {
     vertical-align: middle;
 }
 
+input {
+    padding: 0.7rem;
+    font-size: 1rem;
+    height: 40px;
+    border-radius: 10px;
+}
+
 /* Utilities */
 .container {
     max-width: 1200px;
@@ -53,10 +60,32 @@ img {
     }
 }
 
+.d-flex {
+    display: flex;
+}
+
+.d-none {
+    display: none;
+}
+
+.btn {
+    width: 280px;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    border-radius: 30px;
+}
+
+.btn-primary {
+    background-color: #E53170;
+    border: 2px solid #E53170;
+    color: white;
+}
+
 /* Title */
 .title {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 2rem;
     align-content: center;
     padding: 3rem 0rem;
@@ -123,7 +152,22 @@ img {
 }
 
 /* Add Member Section */
-.add-member-section {
+#add-member-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+
+    h2 {
+        text-align: center;
+        font-weight: 800;
+        color: #E53170;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }

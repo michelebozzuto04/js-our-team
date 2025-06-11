@@ -37,6 +37,7 @@ const teamMembers = [
   }
 ];
 
+// Form Inputs
 const form = document.getElementById("form");
 const inputFullName = document.getElementById("fullName");
 const inputJob = document.getElementById("job");
@@ -44,7 +45,12 @@ const inputEmail = document.getElementById("email");
 const inputImageUrl = document.getElementById("imageUrl");
 const inputSubmitBtn = document.getElementById("button");
 
+// Layout Elements
+const showSectionBtn = document.getElementById("showSectionBtn");
+const hideSectionBtn = document.getElementById("hideSectionBtn");
 const rowEl = document.querySelector(".row");
+const addMemberSection = document.getElementById("add-member-section");
+
 renderTeam(teamMembers, rowEl)
 
 // Render Team Members
@@ -85,5 +91,4 @@ form.addEventListener('submit', (e) => {
 
   renderTeam(teamMembers, rowEl);
 })
-
 
