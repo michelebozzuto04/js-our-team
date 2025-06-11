@@ -37,28 +37,53 @@ const teamMembers = [
   }
 ];
 
+const form = document.getElementById("form");
+const inputFullName = document.getElementById("fullName");
+const inputJob = document.getElementById("job");
+const inputEmail = document.getElementById("email");
+const inputImageUrl = document.getElementById("imageUrl");
+const inputSubmitBtn = document.getElementById("button");
+
 const rowEl = document.querySelector(".row");
 renderTeam(teamMembers, rowEl)
 
+// Render Team Members
 function renderTeam(teamArray, renderEl) {
+  rowEl.innerHTML = '';
   for (let i = 0; i < teamArray.length; i++) {
     const thisMember = teamArray[i];
     const { name, role, email, img } = thisMember;
     renderString = `<div class="col">
-        <div class="card">
-        <div class="card-image">
-          <img src='${img}'>
-        </div>
-        <div class="card-info">
-          <span>${name}</span>
-          <span>${role}</span>
-          <a href="#">${email}</a>
-        </div>
-      </div>`;
+    <div class="card">
+    <div class="card-image">
+    <img src='${img}'>
+    </div>
+    <div class="card-info">
+    <span>${name}</span>
+    <span>${role}</span>
+    <a href="#">${email}</a>
+    </div>
+    </div>`;
     renderEl.insertAdjacentHTML('beforeend', renderString);
   }
 }
 
+// Add New Member
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
 
+  const fullName = inputFullName.value;
+  const job = inputJob.value;
+  const email = inputEmail.value;
+  const imageUrl = inputImageUrl.value;
+
+  const newMember = {
+    name: fullName, role: job, email: email, img: imageUrl
+  }
+
+  teamMembers.push(newMember);
+
+  renderTeam(teamMembers, rowEl);
+})
 
 
