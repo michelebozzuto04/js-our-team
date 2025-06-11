@@ -42,11 +42,16 @@ const rowEl = document.querySelector(".row");
 for (let i = 0; i < teamMembers.length; i++) {
   const thisMember = teamMembers[i];
   const { name, role, email, img } = thisMember;
-  renderString = `<div class="col-4 card">
-      <span>${name}</span>
-      <span>${role}</span>
-      <span>${email}</span>
-      <img src='${img}'>
+  renderString = `<div class="col-4">
+      <div class="card">
+      <div class="card-image">
+        <img src='${img}'>
+      </div>
+      <div class="card-info">
+        <span>${name}</span>
+        <span>${role}</span>
+        <a href="#">${email}</a>
+      </div>
     </div>`;
   rowEl.insertAdjacentHTML('beforeend', renderString);
 }

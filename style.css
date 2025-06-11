@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+/* Generics */
+body {
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
 /* Utilities */
 .container {
     max-width: 1200px;
@@ -35,6 +45,7 @@
 }
 
 .col-4 {
+    padding: 1rem;
     width: calc(100% / 12 * 4);
 }
 
@@ -73,7 +84,28 @@
 /* Card */
 .card {
     display: flex;
-    flex-direction: column;
     background-color: black;
     color: white;
+
+    .card-image {
+        width: 30%;
+    }
+
+    .card-info {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+
+        span:first-of-type {
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        a {
+            color: #5CB4BF;
+            text-decoration: none;
+        }
+    }
 }
