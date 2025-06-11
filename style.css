@@ -29,7 +29,7 @@ img {
     margin: 0 -1rem;
 }
 
-.col-4 {
+.col {
     padding: 1rem;
     width: calc(100% / 12 * 4);
 
@@ -104,4 +104,26 @@ img {
             justify-content: center;
         }
     }
+
+    @media screen and (max-width: 380px) {
+        flex-direction: column;
+
+        .card-image {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .card-info {
+            width: 100%;
+        }
+    }
+}
+
+/* Add Member Section */
+.add-member-section {
+    display: flex;
+    flex-direction: column;
 }

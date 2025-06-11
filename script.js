@@ -38,20 +38,27 @@ const teamMembers = [
 ];
 
 const rowEl = document.querySelector(".row");
+renderTeam(teamMembers, rowEl)
 
-for (let i = 0; i < teamMembers.length; i++) {
-  const thisMember = teamMembers[i];
-  const { name, role, email, img } = thisMember;
-  renderString = `<div class="col-4">
-      <div class="card">
-      <div class="card-image">
-        <img src='${img}'>
-      </div>
-      <div class="card-info">
-        <span>${name}</span>
-        <span>${role}</span>
-        <a href="#">${email}</a>
-      </div>
-    </div>`;
-  rowEl.insertAdjacentHTML('beforeend', renderString);
+function renderTeam(teamArray, renderEl) {
+  for (let i = 0; i < teamArray.length; i++) {
+    const thisMember = teamArray[i];
+    const { name, role, email, img } = thisMember;
+    renderString = `<div class="col">
+        <div class="card">
+        <div class="card-image">
+          <img src='${img}'>
+        </div>
+        <div class="card-info">
+          <span>${name}</span>
+          <span>${role}</span>
+          <a href="#">${email}</a>
+        </div>
+      </div>`;
+    renderEl.insertAdjacentHTML('beforeend', renderString);
+  }
 }
+
+
+
+
