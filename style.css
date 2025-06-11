@@ -1,0 +1,79 @@
+/* CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Utilities */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.col {
+    flex-basis: auto;
+}
+
+.col-1 {
+    width: calc(100% / 12 * 1);
+}
+
+.col-2 {
+    width: calc(100% / 12 * 2);
+}
+
+.col-3 {
+    width: calc(100% / 12 * 3);
+}
+
+.col-4 {
+    width: calc(100% / 12 * 4);
+}
+
+.col-5 {
+    width: calc(100% / 12 * 5);
+}
+
+.col-6 {
+    width: calc(100% / 12 * 6);
+}
+
+.col-7 {
+    width: calc(100% / 12 * 7);
+}
+
+.col-8 {
+    width: calc(100% / 12 * 8);
+}
+
+.col-9 {
+    width: calc(100% / 12 * 9);
+}
+
+.col-10 {
+    width: calc(100% / 12 * 10);
+}
+
+.col-11 {
+    width: calc(100% / 12 * 11);
+}
+
+.col-12 {
+    width: calc(100% / 12 * 12);
+}
+
+/* Card */
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
